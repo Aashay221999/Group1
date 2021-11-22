@@ -1,0 +1,41 @@
+
+<input type="date" value="2021-11-18" [name]="date">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            <h2>Date</h2>
+                </div>
+                <div class="col-sm-2">
+                    <h2>Time Slot</h2>      
+                </div>
+                <div class="col-sm-3">
+                    <h2>Appointee ID</h2>
+                </div>
+                <div class="col-sm-3">
+                    <h2>Description</h2>
+                </div>
+                <div class="col-sm-3">
+                    <h2>Book</h2>
+                </div>
+
+    </div>
+    <div class="row" *ngFor="let element of appEntryList">
+        <div class="col-sm-2">
+             {{element._date}}
+        </div>
+        <div class="col-sm-3">
+            {{element._timeslot}}       
+        </div>
+        <div class="col-sm-3">
+            {{element._appointeeid}}
+        </div>
+        <div class="col-sm-3">
+            {{element._description}}
+        </div>
+        <div>
+            <button (click)="book()"></button>
+        </div>
+        
+    </div>
+
+</div>

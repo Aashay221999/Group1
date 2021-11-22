@@ -1,0 +1,52 @@
+
+<div>Unapproved Appointment Entries :</div>
+<div class="container">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Appointment Entry ID </th>
+                <th>Date </th>
+                <th>timeSlot </th>
+                <th>Appointee ID </th>
+                <th>Description </th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let appEntry of appointmentCalender.getListNotApprovedAppointmentEntries()">
+                <td>{{appEntry.getAeID()}}</td>
+                <td>{{appEntry.getDate()}}</td>
+                <td>{{appEntry.getTime()}}</td>
+                <td>{{appEntry.getAppointeeID()}}</td>
+                <td>{{appEntry.getDescription()}}</td>
+                <td><button class="btn btn-success" (click)="approve(appEntry.getAeID())">Approve</button></td>
+                <td><button class="btn btn-danger" (click)="delete(appEntry.getAeID())">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>Approved Appointment Entries :</div>
+<div class="container">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Appointment Entry ID </th>
+                <th>Date </th>
+                <th>timeSlot </th>
+                <th>Appointee ID </th>
+                <th>Description </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let appEntry of appointmentCalender.getListApprovedAppointmentEntries()">
+                <td>{{appEntry.getAeID()}}</td>
+                <td>{{appEntry.getDate()}}</td>
+                <td>{{appEntry.getTime()}}</td>
+                <td>{{appEntry.getAppointeeID()}}</td>
+                <td>{{appEntry.getDescription()}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

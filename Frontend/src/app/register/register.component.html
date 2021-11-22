@@ -1,0 +1,119 @@
+
+<div><h2>Registration Form</h2></div>
+
+<div *ngIf="error" class="alert alert-danger">{{error}}</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4" id="mrow">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <fieldset>
+                <!-- <legend>SignUp</legend> -->
+               <br>
+                <!-- <div class="form-group">
+                <label for="inputUserID">UserID</label>
+                <input class="form-control" type="number" 
+                    id="inputUserID"
+                    placeholder="UserID"
+                    name="UserID"
+                    formControlName="userID"
+                    >
+                </div>
+                <div *ngIf="registerForm.controls.userID.invalid && registerForm.controls.userID.touched">
+                    <div *ngIf="checkWhichError(1)"> </div>
+                </div>
+                <div *ngIf="registerForm.controls.userID.touched">
+                    <div *ngIf="isUserIDUnique()"> </div>
+                </div>
+                <div *ngIf="registerForm.controls.userID.valid">
+                    <div *ngIf="unSetError()"> </div>
+                </div> -->
+                <div class="form-group">
+                <label for="inputUserName">UserName</label>
+                <input class="form-control" type="text" 
+                    id="inputUserName"
+                    placeholder="UserName"
+                    name="UserName"
+                    formControlName="username"
+                    >
+                </div>
+                <div *ngIf="registerForm.controls.username.invalid && registerForm.controls.username.touched">
+                    <div *ngIf="checkWhichError(2)"> </div>
+                </div>
+                <!-- <div *ngIf="registerForm.controls.username.touched && registerForm.controls.username.valid">
+                    <div *ngIf="isUserNamesUnique()"> </div>
+                </div> -->
+                <div *ngIf="registerForm.controls.username.valid">
+                    <div *ngIf="unSetError()"> </div>
+                </div>
+                <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input class="form-control" type="password" 
+                    id="inputPassword"
+                    placeholder="Password"
+                    name="password"
+                    formControlName="password"
+                >
+                </div>
+                <div *ngIf="registerForm.controls.password.invalid && registerForm.controls.password.touched">
+                    <div *ngIf="checkWhichError(3)"> </div>
+                </div>
+                <div *ngIf="registerForm.controls.password.valid">
+                    <div *ngIf="unSetError()"> </div>
+                </div>
+                <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input class="form-control" type="text" 
+                    id="inputEmail"
+                    placeholder="Email"
+                    name="email"
+                    formControlName="email"
+                    >
+                </div>
+                <div *ngIf="registerForm.controls.email.invalid && registerForm.controls.email.touched">
+                    <div *ngIf="checkWhichError(4)"> </div>
+                </div>
+                <div *ngIf="registerForm.controls.email.valid">
+                    <div *ngIf="unSetError()"> </div>
+                </div>
+                <div class="form-group">
+                <label for="inputMobileNumber">Mobile Number</label>
+                <input class="form-control" type="text" 
+                    id="inputMobileNumber"
+                    placeholder="Mobile Number"
+                    name="mobileNumber"
+                    formControlName="mobile"
+                    >
+                </div>
+                <div *ngIf="registerForm.controls.mobile.invalid && registerForm.controls.mobile.touched">
+                     <div *ngIf="checkWhichError(5)"> </div>
+                </div>
+                <div *ngIf="registerForm.controls.mobile.valid">
+                    <div *ngIf="unSetError()"> </div>
+                </div>
+                <div class="form-group">
+                <label for="inputEmail">Date of Birth</label>
+                <input class="form-control" type="date" 
+                    id="inputDoB"
+                    placeholder="Date of Birth"
+                    name="DoB"
+                    formControlName="dob"
+                    >
+                </div>
+                <div *ngIf="registerForm.controls.dob.invalid && registerForm.controls.dob.touched">
+                    <div *ngIf="checkWhichError(5)"> </div>
+                </div>
+                <div *ngIf="registerForm.controls.dob.valid">
+                    <div *ngIf="unSetError()"> </div>
+                </div>
+            </fieldset>
+            <button type="submit" class="rbt">Submit</button>
+            <a routerLink="/login" class="btn btn-link">Cancel</a>
+            
+            </form>
+            <br>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+</div>

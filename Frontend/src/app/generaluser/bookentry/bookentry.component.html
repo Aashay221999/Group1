@@ -1,0 +1,21 @@
+
+<div><h2>Booking Appointment Form</h2></div>
+
+<div *ngIf="error" class="alert alert-danger">{{error}}</div>
+<div>
+    <form [formGroup]="bookEntryForm" (ngSubmit)="onSubmit()">
+    <fieldset>
+        <div class="form-group">
+        <label for="inputDescription">Description</label>
+        <input type="text" 
+            id="inputDescription"
+            placeholder="Please Enter Description"
+            name="description"
+            formControlName="description"
+            >
+        </div>
+    </fieldset>
+    <button type="submit" class="btn btn-default">Submit</button>
+    <a routerLink="/bookApp" class="btn btn-link">Cancel</a>
+    </form>
+</div>

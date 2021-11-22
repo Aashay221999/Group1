@@ -1,0 +1,54 @@
+<br>
+<div >
+  <form #calenderdata = "ngForm" id="va" [formGroup]="profileForm" (ngSubmit)="onSubmit(calenderdata.value)">
+
+    <div class="form-group" >
+      <div class="form-row">
+        <div class="col">
+          <label>Location:</label>
+      <input class="form-control" id="location" type="text" formControlName="location" ngModel>
+    <br>
+        </div>
+        <div class="col">
+          <label >Type:</label>
+          <select id="vcm" class="form-control" formControlName="type" ngModel>
+            <option value="default">----</option>
+            <option *ngFor="let typeA of type" [value]="typeA">{{typeA}}</option>
+          </select> <br>
+        </div>
+        <div class="col">
+          <label>Description:</label>
+      <input class="form-control" id="last-name" type="text" formControlName="desc" ngModel> <br>
+        </div>
+        <div class="col" >
+          <br>
+          <button class="rbt"  type="submit" >Submit</button>
+        </div>
+      </div>
+  
+      <!-- <label for="cid">Calender ID: </label> -->
+      <!-- <label>Calender ID:</label>
+      <input class="form-control" id="first-name" type="number" formControlName="cid" ngModel> <br>
+       <label for="location">Location: </label> -->
+      <!-- <label>Location:</label>
+      <input class="form-control" id="location" type="text" formControlName="location" ngModel>
+       <label for="type">Type: </label> <br> -->
+      <!-- <label>Type:</label>
+      <select class="form-control" formControlName="type" ngModel>
+        <option value="default">----</option>
+        <option *ngFor="let typeA of type" [value]="typeA">{{typeA}}</option>
+      </select>   -->
+      <!-- <label for="desc">Description: </label> -->
+      <!-- <label>Description:</label>
+      <input class="form-control" id="last-name" type="text" formControlName="desc" ngModel>
+   <br>
+    
+  <button class="btn btn-primary" type="submit" >Submit</button> --> 
+    </div>
+  
+  </form>
+
+
+
+</div>
+

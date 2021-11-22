@@ -1,0 +1,38 @@
+
+<br>
+<br>
+<h2>Welcome {{this.username}} </h2>
+<br>
+<br>
+<br>
+
+
+<h3>My Appointment Entries :</h3>
+<div class="container">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Appointment Entry ID </th>
+                <th>Appointment Calendar ID </th>
+                <th>Owner Name </th>
+                <th>Date</th>
+                <th>Approved </th>
+                <th>Timeslot </th>
+                <th>Apointee Name </th>
+                <th>Description </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let appE of appEntryList">
+                <td>{{appE.getAeID()}}</td>
+                <td>{{appE.getAppointmentCalendarID()}}</td>
+                <td>{{appE.getOwnerid()}}</td>
+                <td>{{appE.getDate()}}</td>
+                <td>{{appE.getIsApproved()}}</td>
+                <td>{{appE.getTime()}}</td>
+                <td>{{appE.getAppointeeID()}}</td>
+                <td>{{appE.getDescription()}}</td>
+                </tr>
+        </tbody>
+    </table>
+</div>

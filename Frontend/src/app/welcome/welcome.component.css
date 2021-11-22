@@ -1,0 +1,30 @@
+.gbs{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 250px;
+    color:#AC3B61;
+}
+
+.wm1{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 30px;
+   
+}
+
+#cbt{
+    text-align: center;
+    
+}
+
+.bt{
+    height: 40px;
+    width:70px;
+}
+
+.lr{
+    float:left;
+}
+.rt{
+    float:right;
+}

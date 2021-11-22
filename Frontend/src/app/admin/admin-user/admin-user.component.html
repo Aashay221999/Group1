@@ -1,0 +1,37 @@
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>User ID </th>
+                <th>User Name </th>
+                <th>Mobile Number </th>
+                <th>Date of Birth </th>
+				<th>Email ID</th>
+                <th>IS Admin</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users" >
+				<td>{{user.getuserID()}}</td>
+				<td>{{user.getUserName()}}</td>
+				<td>{{user.getMobileNumber()}}</td>
+				<td>{{user.getDoB()}}</td>
+				<td>{{user.getEmail()}}</td>
+				<td>{{user.getIsAdmin()}}</td>
+				<td><button (click)="getAppointmentCalenders(user.getuserID())">Appointment Calendar</button></td>
+                <td><button (click)="getAppointmentEntries(user.getuserID())">Appointment Entries</button></td>
+                <td><button *ngIf="!user.getIsAdmin()"(click)="delete(user.getuserID())">Delete</button></td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+<br>
+<router-outlet></router-outlet>
